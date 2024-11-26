@@ -1,11 +1,10 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  root: "OliveHub",
   plugins: [react()],
+  base: "/OliveHub/", // Dodajemy ścieżkę bazową
   build: {
-    outDir: "../dist",
+    outDir: "./dist", // upewniamy się, że pliki będą generowane w dist poza OliveHub
   },
 });
