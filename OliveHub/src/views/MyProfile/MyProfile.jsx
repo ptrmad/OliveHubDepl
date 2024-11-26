@@ -1,10 +1,10 @@
-import { use } from "react";
+import { useContext } from "react";
 import { FavouritesContext } from "../../contexts/FavouritesContext";
 import USERIMAGE from "../../assets/profilepic.jpg";
 import styles from "./MyProfile.module.css";
 
 export function MyProfile() {
-  const { favourites } = use(FavouritesContext);
+  const { favourites } = useContext(FavouritesContext);
 
   const userData = {
     name: "user1",

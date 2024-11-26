@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import { FavouritesContext } from "../../contexts/FavouritesContext";
 import styles from "../Explore/Explore.module.css";
 
-import { use } from "react";
+import { useContext } from "react";
 import { ArticleCover } from "../../components/ArticleCover/ArticleCover";
 
 export function Favourites() {
-  const { favourites, setFavourites } = use(FavouritesContext);
+  const { favourites, setFavourites } = useContext(FavouritesContext);
 
   function handleRemoveFromFavourites(item) {
     setFavourites(

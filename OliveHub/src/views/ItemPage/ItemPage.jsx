@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { data } from "../../data/data";
 import { FavouritesContext } from "../../contexts/FavouritesContext";
-import { use } from "react";
+import { useContext } from "react";
 
 import styles from "./ItemPage.module.css";
 
@@ -10,7 +10,7 @@ import STAR from "../../assets/star.svg";
 
 export function ItemPage() {
   const { itemId } = useParams();
-  const { favourites, setFavourites } = use(FavouritesContext);
+  const { favourites, setFavourites } = useContext(FavouritesContext);
 
   function handleAddToFavourites(newFavItem) {
     const isAlreadyFavorite = favourites.some(
